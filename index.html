@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eco Plastic Innovators</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+            background-color: #e3f2fd;
+            color: #333;
+        }
+        nav {
+            background: linear-gradient(90deg, #ff6f61, #ff9a8b);
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            transition: background 0.3s;
+        }
+        nav ul {
+            list-style: none;
+            text-align: center;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 20px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            transition: transform 0.3s ease-in-out;
+        }
+        nav ul li a:hover {
+            transform: scale(1.1);
+            color: #ffd700;
+            font-size: 21px;
+            transition: .7s;
+        }
+        section {
+            padding: 100px 20px;
+            text-align: center;
+            min-height: 100vh;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+            text-align: left;
+        }
+        .visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        #home {
+            background: linear-gradient(135deg, #ffcc00, #ff6f61);
+            color: white;
+            padding-top: 120px;
+            animation: fadeIn 2s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        #blueprints, #tutorials, #forum {
+            background: white;
+            border-radius: 20px;
+            margin: 20px auto;
+            width: 90%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 50px;
+            transition: transform 0.3s ease-in-out;
+        }
+        #blueprints:hover, #tutorials:hover, #forum:hover {
+            transform: scale(1.02);
+        }
+        button {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            background: #ff6f61;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s;
+        }
+        button:hover {
+            background: #ff9a8b;
+            transform: scale(1.2);
+        }
+        footer {
+            background: #ff6f61;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+            }
+            nav ul li {
+                margin: 5px 0;
+            }
+            section {
+                padding: 80px 10px;
+                text-align: left;
+            }
+            #blueprints, #tutorials, #forum {
+                width: 95%;
+                padding: 30px;
+            }
+            button {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#blueprints">Machine Blueprints</a></li>
+                <li><a href="#tutorials">Tutorial Videos</a></li>
+                <li><a href="#forum">Community Forum</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="home" class="fade-in">
+        <h1>Welcome to DIY Plastic Recycling Hub</h1>
+        <p>Your go-to platform for learning how to recycle plastic waste at home and create innovative products.</p>
+        <p>Plastic pollution has become a global crisis, impacting our environment, wildlife, and health. At DIY Plastic Recycling Hub, we empower individuals to take action by providing practical solutions for managing plastic waste effectively. Our mission is to encourage sustainable living by teaching people how to convert plastic waste into valuable items, reducing landfill waste and promoting a cleaner planet.</p>
+        <p>Explore our comprehensive guides, machine blueprints, and step-by-step tutorials to start your recycling journey today. Whether you're an environmental enthusiast, a DIY maker, or someone looking to make a difference, this hub is designed to help you contribute to a sustainable future.</p>
+        <button onclick="alert('Join Our Community!')">Join Now</button>
+    </section>
+
+    <section id="blueprints" class="fade-in">
+        <h2>Machine Blueprints</h2>
+        <p>Discover step-by-step guides to build your own recycling machines.</p>
+        <p>Our blueprints are designed for DIY enthusiasts, small businesses, and community initiatives. These machines help shred, melt, and mold plastic into valuable new products, reducing landfill waste and supporting a circular economy.</p>
+        <ul>
+            <li><a href="#">Shredder Machine Blueprint (PDF)</a></li>
+            <li><a href="#">Injection Molder Blueprint (PDF)</a></li>
+            <li><a href="#">Extrusion Machine Blueprint (PDF)</a></li>
+            <li><a href="#">Compression Machine Blueprint (PDF)</a></li>
+        </ul>
+    </section>
+
+    <section id="tutorials" class="fade-in">
+        <h2>Tutorial Videos</h2>
+        <p>Learn how to operate machines and turn plastic waste into products.</p>
+        <p>Our tutorials cover everything from setting up machines to crafting new items like tiles, furniture, and household tools. Get hands-on experience and contribute to reducing plastic waste.</p>
+        <div>
+            <iframe width="340" height="600" src="DIY1.mp4" frameborder="0" allowfullscreen></iframe>
+            <iframe width="340" height="600" src="DIY2.mp4" frameborder="0" allowfullscreen></iframe>
+            <iframe width="340" height="600" src="DIY3.mp4" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </section>
+
+     <section id="forum" class="fade-in">
+        <h2>Community Forum</h2>
+        <p>Join discussions, share your experiences, and showcase your recycling projects.</p>
+        <p>Collaboration is key to innovation! Our community forum connects like-minded individuals to exchange ideas, improve designs, and inspire sustainable living. Share your journey and learn from others passionate about recycling.</p>
+        <button onclick="alert('Redirecting to the forum!')">Visit Forum</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 DIY Plastic Recycling Hub. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('nav ul li a').forEach(anchor => {
+            anchor.addEventListener('click', function(event) {
+                event.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                document.getElementById(targetId).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Scroll animation
+        const sections = document.querySelectorAll("section");
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                }
+            });
+        }, { threshold: 0.2 });
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
